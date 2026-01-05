@@ -1,39 +1,100 @@
-# Jekyll 설정 파일
-# GitHub Pages용 QA Tech Blog
+# Chirpy 테마 설정
+# QA Tech Blog
 
 # 사이트 기본 정보
 title: QA Tech Blog
-description: 시니어 QA 전문가의 기술 블로그 - 테스트 자동화, 품질 관리, QA 베스트 프랙티스
-author: QA Engineer
-email: your-email@example.com
+tagline: 시니어 QA 전문가의 기술 블로그
+description: 테스트 자동화, 품질 관리, QA 베스트 프랙티스를 공유합니다
 
 # GitHub Pages 설정
-baseurl: "/Apis.github.io" # 서브 경로
-url: "https://minoim.github.io" # 사이트 URL
+url: "https://minoim.github.io"
+baseurl: "/Apis.github.io"
 
 # 테마 설정
-theme: minima
+theme: jekyll-theme-chirpy
+
+# 언어 및 시간대
+lang: ko-KR
+timezone: Asia/Seoul
+
+# 저자 정보
+author: QA Engineer
+
+# 소셜 링크
+github:
+  username: minoim
+
+social:
+  name: QA Engineer
+  email: your-email@example.com
+  links:
+    - https://github.com/minoim
+
+# 분석 (선택사항)
+analytics:
+  google:
+    id: ""
+
+# 페이지 설정
+paginate: 10
+
+# Chirpy 테마 설정
+theme_mode: dark  # 다크모드 기본값
+
+avatar: ""  # 프로필 이미지 URL (선택)
+
+toc: true  # 목차 표시
+
+comments:
+  provider: ""  # giscus, disqus 등
 
 # 빌드 설정
 markdown: kramdown
 highlighter: rouge
 
-# 퍼머링크 설정
-permalink: /:year/:month/:day/:title/
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    block:
+      line_numbers: true
 
-# 플러그인
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# 퍼머링크
+permalink: /posts/:title/
 
-# 소셜 링크 (선택사항)
-minima:
-  social_links:
-    - { platform: github, user_url: "https://github.com/minoim" }
+# 기본값
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _tabs
+      type: pages
+    values:
+      layout: page
+      permalink: /:title/
 
-# 제외할 파일
+# 제외
 exclude:
-  - Gemfile
-  - Gemfile.lock
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
   - README.md
-  - vendor
+  - LICENSE
+  - "*.config.js"
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
