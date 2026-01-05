@@ -8,7 +8,7 @@ author: QA Engineer
 email: your-email@example.com
 
 # GitHub Pages 설정
-baseurl: "" # 서브 경로 (예: /blog)
+baseurl: "/Apis.github.io" # 서브 경로
 url: "https://minoim.github.io" # 사이트 URL
 
 # 테마 설정
