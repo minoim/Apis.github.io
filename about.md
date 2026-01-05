@@ -1,16 +1,12 @@
 ---
 layout: page
-icon: fas fa-info-circle
-order: 4
+title: About
+permalink: /about/
 ---
 
 # About Me
 
-안녕하세요! 시니어 QA 전문가의 기술 블로그에 오신 것을 환영합니다.
-
-## 소개
-
-저는 소프트웨어 품질 보증(QA) 분야에서 다년간의 경험을 쌓아온 QA 엔지니어입니다.
+안녕하세요! 시니어 QA 전문가입니다.
 
 ## 전문 분야
 

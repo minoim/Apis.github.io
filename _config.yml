@@ -1,60 +1,22 @@
-# Chirpy 테마 설정
+# Jekyll 설정 파일
 # QA Tech Blog
 
 # 사이트 기본 정보
 title: QA Tech Blog
-tagline: 시니어 QA 전문가의 기술 블로그
-description: 테스트 자동화, 품질 관리, QA 베스트 프랙티스를 공유합니다
+description: 시니어 QA 전문가의 기술 블로그 - 테스트 자동화, 품질 관리, QA 베스트 프랙티스
+author: QA Engineer
 
 # GitHub Pages 설정
 url: "https://minoim.github.io"
 baseurl: "/Apis.github.io"
 
 # 테마 설정
-remote_theme: cotes2020/jekyll-theme-chirpy
+remote_theme: pages-themes/midnight@v0.2.0
 
 plugins:
-  - jekyll-paginate
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-sitemap
   - jekyll-remote-theme
-
-# 언어 및 시간대
-lang: ko-KR
-timezone: Asia/Seoul
-
-# 저자 정보
-author: QA Engineer
-
-# 소셜 링크
-github:
-  username: minoim
-
-social:
-  name: QA Engineer
-  email: your-email@example.com
-  links:
-    - https://github.com/minoim
-
-# 분석 (선택사항)
-analytics:
-  google:
-    id: ""
-
-# 페이지 설정
-paginate: 10
-
-# Chirpy 테마 설정
-theme_mode: dark  # 다크모드 기본값
-
-avatar: ""  # 프로필 이미지 URL (선택)
-
-toc: true  # 목차 표시
-
-comments:
-  provider: ""  # giscus, disqus 등
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # 빌드 설정
 markdown: kramdown
@@ -64,11 +26,9 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: highlight
-    block:
-      line_numbers: true
 
-# 퍼머링크
-permalink: /posts/:title/
+# 퍼머링크 설정
+permalink: /:year/:month/:day/:title/
 
 # 기본값
 defaults:
@@ -77,32 +37,10 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: true
-      toc: true
-      permalink: /posts/:title/
-  - scope:
-      path: _tabs
-      type: pages
-    values:
-      layout: page
-      permalink: /:title/
 
-# 제외
+# 제외할 파일
 exclude:
-  - "*.gem"
-  - "*.gemspec"
-  - docs
-  - tools
+  - Gemfile
+  - Gemfile.lock
   - README.md
-  - LICENSE
-  - "*.config.js"
-  - package*.json
-
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+  - vendor
