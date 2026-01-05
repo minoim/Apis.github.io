@@ -11,7 +11,15 @@ url: "https://minoim.github.io"
 baseurl: "/Apis.github.io"
 
 # 테마 설정
-theme: jekyll-theme-chirpy
+remote_theme: cotes2020/jekyll-theme-chirpy
+
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-remote-theme
 
 # 언어 및 시간대
 lang: ko-KR
