@@ -1,0 +1,39 @@
+# Jekyll 설정 파일
+# GitHub Pages용 QA Tech Blog
+
+# 사이트 기본 정보
+title: QA Tech Blog
+description: 시니어 QA 전문가의 기술 블로그 - 테스트 자동화, 품질 관리, QA 베스트 프랙티스
+author: QA Engineer
+email: your-email@example.com
+
+# GitHub Pages 설정
+baseurl: "" # 서브 경로 (예: /blog)
+url: "https://minoim.github.io" # 사이트 URL
+
+# 테마 설정
+theme: minima
+
+# 빌드 설정
+markdown: kramdown
+highlighter: rouge
+
+# 퍼머링크 설정
+permalink: /:year/:month/:day/:title/
+
+# 플러그인
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 소셜 링크 (선택사항)
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/minoim" }
+
+# 제외할 파일
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
